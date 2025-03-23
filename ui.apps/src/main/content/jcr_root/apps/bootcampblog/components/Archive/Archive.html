@@ -1,0 +1,13 @@
+<sly data-sly-use.model="com.bootcamp.blog.core.models.Archive"/>
+<sly data-sly-test="${model.parentPagePath && model.formattedDates}">
+    <h2>Archives</h2>
+    <ul>
+        <sly data-sly-list.date="${model.formattedDates}">
+            <li style="list-style:none">
+                <a href="${model.parentPagePath @ extension='html', context='uri'}?year=${date.year}&month=${date.month}" >
+                    ${date.year}-${date.month}
+                </a>
+            </li>
+        </sly>
+    </ul>
+</sly>

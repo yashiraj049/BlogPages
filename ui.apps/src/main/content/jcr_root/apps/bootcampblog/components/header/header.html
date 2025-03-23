@@ -1,0 +1,27 @@
+
+<sly data-sly-use.headerModel="com.bootcamp.blog.core.models.Modelheader" />
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" />
+<sly data-sly-call="${clientLib.css @ categories='bootcampblog.clientlibheader'}" />
+
+<header id="header">
+    <div id="logo">
+        <sly data-sly-test="${headerModel.logoImage}">
+            <img src="${headerModel.logoImage @ context='uri'}" alt="Logo" id="logo-img">
+        </sly>
+        <sly data-sly-test="${headerModel.logoText}">
+            <h2>${headerModel.logoText}</h2>
+        </sly>
+    </div>
+
+    <div class="menu">
+        <span>&#9776;</span>
+    </div>
+
+    <hr/>
+
+    <ul class="nav-items" data-sly-list.navItem="${headerModel.navItems}">
+        <li>
+            <a href="${navItems.Link @ context='uri'}">${navItem.Title}</a>
+        </li>
+    </ul>
+</header>

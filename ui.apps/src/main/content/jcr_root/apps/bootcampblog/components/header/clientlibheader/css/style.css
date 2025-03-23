@@ -1,0 +1,32 @@
+/* Header */
+
+#logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#logo-img{
+    height: 5%;
+    width: 5%;
+}
+.menu{
+    display:none;
+}
+.nav-items{
+    margin-top: 1rem;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin-left: 2%;
+        text-decoration: none;
+        color: black;
+
+}
+h2{
+    font-size: 20px;
+}
+

@@ -1,0 +1,45 @@
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" />
+<sly data-sly-call="${clientLib.css @ categories='bootcampblog.clientlibfooter'}" />
+<footer data-sly-use.footerModel="com.bootcamp.blog.core.models.FooterModel" >
+    <div class="bottom">
+        <sly data-sly-test="${footerModel.text1}">
+            <a href="#header"> ${footerModel.text1}</a>
+        </sly>
+    </div>
+
+    <hr/>
+
+    <ul class="nav-item"  data-sly-list.navItem="${footerModel.navItems}">
+        <li>
+            <a href="${navItem.Link @ extension='html', context='uri'}">${navItem.Title}</a>
+        </li>
+    </ul>
+
+    <div class="rights">
+        <sly data-sly-test="${footerModel.text2}">
+            &copy; ${footerModel.text2}
+        </sly>
+    </div>
+</footer>
+
+<!--<footer>-->
+<!--    <div class="bottom">-->
+<!--        ${properties.Text}-->
+<!--    </div>-->
+<!--    <hr/>-->
+<!--    <ul class="nav-item"   data-sly-list.multi=${properties.navTitle}>-->
+<!--        <li>${multi}</li>-->
+<!--    </ul>-->
+<!--    &lt;!&ndash;<ul class="nav-items" data-sly-list.navItem="${properties.navItems}">&ndash;&gt;-->
+<!--        &lt;!&ndash;<li>&ndash;&gt;-->
+<!--            &lt;!&ndash;<a href="${navItem.navLink @ context='uri'}">${navItem.navTitle}</a>&ndash;&gt;-->
+<!--        &lt;!&ndash;</li>&ndash;&gt;-->
+<!--    &lt;!&ndash;</ul>&ndash;&gt;-->
+<!--    <div class ="rights">-->
+<!--        &copy; ${properties.Text2}-->
+<!--    </div>-->
+
+<!--</footer>-->
+
+
+

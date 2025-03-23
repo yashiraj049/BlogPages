@@ -1,0 +1,6 @@
+<sly data-sly-use.headingModel = "com.bootcamp.blog.core.models.Heading"/>
+<div class="heading-component">
+    <h1>${headingModel.title}</h1>
+    <h1>${headingModel.pageTitle}</h1>
+    <p class="date-author"> ${headingModel.formattedDate} by ${headingModel.authorName} </p>
+</div>

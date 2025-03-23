@@ -1,0 +1,12 @@
+<sly data-sly-use.model="com.bootcamp.blog.core.models.PublishPage" />
+
+
+<ul data-sly-list.blog="${model.blogList}">
+    <li class="blog-item">
+        <h2>${blog.heading}</h2>
+        <p class="blog-subheading">${blog.subHeading}</p>
+        <p class="blog-date">${blog.date}</p>
+        <img src="${blog.image}" alt="Blog Image" class="blog-image"/>
+        <a href="${blog.link @ context='uri'}" class="read-more">Read More</a>
+    </li>
+</ul>
